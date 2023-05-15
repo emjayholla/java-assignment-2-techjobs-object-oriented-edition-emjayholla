@@ -2,6 +2,8 @@ package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 
+import static java.util.Objects.isNull;
+
 public class Job {
 
     private int id;
@@ -83,6 +85,57 @@ public class Job {
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
     }
+
+
+    public String toString(){
+    String jobDescription = "\n";
+        jobDescription += "ID: ";
+        if (isNull(id)) {
+            jobDescription += "Data not available";
+        } else {
+            jobDescription += id;
+        }
+
+        jobDescription += "\nName: " + name;
+        if (isNull(name)) {
+            jobDescription += "Data not available";
+        } else {
+            jobDescription += name;
+        }
+
+        jobDescription += "\nEmployer: " + employer;
+        if (isNull(employer)) {
+            jobDescription += "Data not available";
+        } else {
+            jobDescription += employer;
+        }
+
+        jobDescription += "\nLocation: " + location;
+        if (isNull(location)) {
+            jobDescription += "Data not available";
+        } else {
+            jobDescription += location;
+        }
+
+        jobDescription += "\nPosition Type: " + positionType;
+        if (isNull(positionType)) {
+            jobDescription += "Data not available";
+        } else {
+            jobDescription += positionType;
+        }
+
+        jobDescription += "\nCore Competency: " + coreCompetency;
+        if (isNull(coreCompetency)) {
+            jobDescription += "Data not available";
+        } else {
+            jobDescription += coreCompetency;
+        }
+
+        jobDescription += ("\n");
+
+        return jobDescription;
+    }
+
     // TODO: Add two constructors - one to initialize a unique ID and a second to initialize the
     //  other five fields. The second constructor should also call the first in order to initialize
     //  the 'id' field.
