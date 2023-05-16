@@ -88,7 +88,7 @@ public class Job {
 
 
     public String toString(){
-    String jobDescription = "\n";
+        String jobDescription = "\n";
         jobDescription += "ID: ";
         if (isNull(id)) {
             jobDescription += "Data not available";
@@ -96,35 +96,35 @@ public class Job {
             jobDescription += id;
         }
 
-        jobDescription += "\nName: " + name;
+        jobDescription += "\nName: ";
         if (isNull(name)) {
             jobDescription += "Data not available";
         } else {
             jobDescription += name;
         }
 
-        jobDescription += "\nEmployer: " + employer;
+        jobDescription += "\nEmployer: ";
         if (isNull(employer)) {
             jobDescription += "Data not available";
         } else {
             jobDescription += employer;
         }
 
-        jobDescription += "\nLocation: " + location;
+        jobDescription += "\nLocation: ";
         if (isNull(location)) {
             jobDescription += "Data not available";
         } else {
             jobDescription += location;
         }
 
-        jobDescription += "\nPosition Type: " + positionType;
+        jobDescription += "\nPosition Type: ";
         if (isNull(positionType)) {
             jobDescription += "Data not available";
         } else {
             jobDescription += positionType;
         }
 
-        jobDescription += "\nCore Competency: " + coreCompetency;
+        jobDescription += "\nCore Competency: ";
         if (isNull(coreCompetency)) {
             jobDescription += "Data not available";
         } else {
