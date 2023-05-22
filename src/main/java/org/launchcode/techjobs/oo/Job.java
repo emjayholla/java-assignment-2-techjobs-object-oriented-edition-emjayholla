@@ -97,35 +97,35 @@ public class Job {
         }
 
         jobDescription += "\nName: ";
-        if (isNull(name)) {
+        if (isNull(name) || name.equals("")) {
             jobDescription += "Data not available";
         } else {
             jobDescription += name;
         }
 
         jobDescription += "\nEmployer: ";
-        if (isNull(employer)) {
+        if (isNull(employer) || employer.getValue().equals("")) {
             jobDescription += "Data not available";
         } else {
             jobDescription += employer;
         }
 
         jobDescription += "\nLocation: ";
-        if (isNull(location)) {
+        if (isNull(location) || location.getValue().equals("")) {
             jobDescription += "Data not available";
         } else {
             jobDescription += location;
         }
 
         jobDescription += "\nPosition Type: ";
-        if (isNull(positionType)) {
+        if (isNull(positionType) || positionType.getValue().equals("")) {
             jobDescription += "Data not available";
         } else {
             jobDescription += positionType;
         }
 
         jobDescription += "\nCore Competency: ";
-        if (isNull(coreCompetency)) {
+        if (isNull(coreCompetency) || coreCompetency.getValue().equals("")) {
             jobDescription += "Data not available";
         } else {
             jobDescription += coreCompetency;

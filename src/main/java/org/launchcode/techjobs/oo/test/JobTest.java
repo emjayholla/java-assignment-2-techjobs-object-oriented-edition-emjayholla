@@ -42,7 +42,7 @@ public class JobTest {
     public void testJobsForEquality() {
         Job testJob3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         Job testJob4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        assertNotEquals(testJob3, testJob4);
+        assertFalse(testJob3.equals(testJob4));
     }
 
     @Test
@@ -73,13 +73,13 @@ public class JobTest {
     }
 @Test
     public void testToStringHandlesEmptyField() {
-    Job testJob = new Job("Product Tester", null, new Location("Desert"), null, new CoreCompetency("Persistence"));
+    Job testJob = new Job("Product Tester", null, new Location(""), null, new CoreCompetency("Persistence"));
     String jobData = testJob.toString();
     String expectedJobData = "\n" +
             "ID: " + testJob.getId() +
             "\nName: Product Tester" +
             "\nEmployer: Data not available" +
-            "\nLocation: Desert" +
+            "\nLocation: Data not available" +
             "\nPosition Type: Data not available" +
             "\nCore Competency: Persistence" +
             "\n";
